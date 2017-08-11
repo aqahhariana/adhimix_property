@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <data>
+
+                <record id="action_view_sales_form" model="ir.actions.act_window">
+                        <field name="name">Sales</field>
+                        <field name="res_model">property.sale</field>
+                        <field name="view_type">form</field>
+                        <field name="view_mode">tree,form</field>
+                        <field name="domain">[]</field>
+                        <field name="context">{}</field>
+                        <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                        </p>
+                        </field>
+                </record>
+               
+
+                <record id="action_view_iom_form" model="ir.actions.act_window">
+                    <field name="name">IOM</field>
+                    <field name="res_model">iom</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+                <record id="action_view_tower_form" model="ir.actions.act_window">
+                    <field name="name">Menara</field>
+                    <field name="res_model">property.order.line</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+               
+                <record id="action_view_pemandangan_form" model="ir.actions.act_window">
+                    <field name="name">Pemandangan</field>
+                    <field name="res_model">property.view</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+                <record id="action_view_tipe_form" model="ir.actions.act_window">
+                    <field name="name">Tipe</field>
+                    <field name="res_model">property.type</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+               <record id="action_view_floor_form" model="ir.actions.act_window">
+                    <field name="name">Lantai</field>
+                    <field name="res_model">property.floor</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+               
+                
+               <record id="action_view_reserved_form" model="ir.actions.act_window">
+                    <field name="name">Reservasi</field>
+                    <field name="res_model">reserved</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+               
+               <record id="action_view_booking_form" model="ir.actions.act_window">
+                    <field name="name">Booking</field>
+                    <field name="res_model">booking.fee</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+               
+                <record id="action_view_category_form" model="ir.actions.act_window">
+                    <field name="name">Apartemen/Hotel/Cluster</field>
+                    <field name="res_model">property.category</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add data
+                    </p>
+                    </field>
+               </record>
+               
+
+               <record id="action_view_management_estate_form" model="ir.actions.act_window">
+                    <field name="name">IPL</field>
+                    <field name="res_model">estate.ipl</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add a data
+                        </p>
+                    </field>
+                </record>
+
+                <record id="action_view_property_rental_form" model="ir.actions.act_window">
+                    <field name="name">Property Rental</field>
+                    <field name="res_model">property.rental</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="domain">[]</field>
+                    <field name="context">{}</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                                Click to add a data
+                        </p>
+                    </field>
+                </record>
+
+                <record id="action_view_unit_form" model="ir.actions.act_window">
+                    <field name="name">Unit</field>
+                    <field name="res_model">property.unit</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                        Click to add a data
+                        </p>                              
+                    </field>
+                </record>
+
+
+                <record id="action_view_purchase_form" model="ir.actions.act_window">
+                    <field name="name">Purchase</field>
+                    <field name="res_model">property.view</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                        Click to add a data
+                        </p>                              
+                    </field>
+                </record>
+
+                <record id="action_view_procurement_form" model="ir.actions.act_window">
+                    <field name="name">Procurement</field>
+                    <field name="res_model">property.budget</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                        Click to add a data
+                        </p>                              
+                    </field>
+                </record>
+                
+             
+			    <record id="action_installment_form_tes" model="ir.actions.act_window">
+                    <field name="name">Installment</field>
+                    <field name="res_model">installment</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">
+                        Click to add a data
+                        </p>                              
+                    </field>
+                </record>
+			    
+			    
+			    <record id="action_property_jenis_form" model="ir.actions.act_window">
+				    <field name="name">Jenis Properti</field>
+				    <field name="res_model">property.jenis</field>
+				    <field name="view_type">form</field>
+				    <field name="view_mode">tree,form</field>
+				    <field name="domain">[]</field>
+				    <field name="context">{}</field>
+				    <field name="help" type="html">
+				        <p class="oe_view_nocontent_create">
+				        	Click to add data
+			            </p>
+			        </field>
+			    </record>
+			    
+			    <record id="action_property_price_form" model="ir.actions.act_window">
+				    <field name="name">Daftar Harga Jual</field>
+				    <field name="res_model">property.unit.price</field>
+				    <field name="view_type">form</field>
+				    <field name="view_mode">tree,form</field>
+				    <field name="domain">[]</field>
+				    <field name="context">{}</field>
+				    <field name="help" type="html">
+				        <p class="oe_view_nocontent_create">
+				        	Click to add data
+			            </p>
+			        </field>
+			    </record>
+			    
+			    
+
+
+                <menuitem id="menu_property_sales" name="Property"/>
+
+                <menuitem id="menu_property_sales_sub" parent="menu_property_sales" name="Penjualan"/>
+                <menuitem id="menu_property_customer" parent="menu_property_sales_sub" name="Kustomer" action="base.action_partner_form"/>
+                <menuitem action="action_view_reserved_form" name="Reservasi" id="menu_property_reservation" parent="menu_property_sales_sub"/>
+                <menuitem action="action_view_booking_form" name="Pemesanan" id="menu_property_booking" parent="menu_property_sales_sub"/>
+                <menuitem action="action_view_sales_form" name="Konfirmasi pemesanan" id="menu_property_booking_fee_received" parent="menu_property_sales_sub"/>
+                <menuitem action="action_view_sales_form" name="SPR" id="menu_property_spr" parent="menu_property_sales_sub"/>
+                <menuitem action="action_view_sales_form" name="SPR Done" id="menu_property_spr_done" parent="menu_property_sales_sub"/>
+
+
+                <menuitem id="menu_property_iom_sub" parent="menu_property_sales" name="IOM"/>
+                <menuitem action="action_view_iom_form" name="Permintaan IOM" id="menu_property_iom_request" parent="menu_property_iom_sub" />
+                <menuitem action="action_view_iom_form" name="IOM" id="menu_property_iom_done" parent="menu_property_iom_sub" />
+
+
+                <menuitem id="menu_property_management_estate_sub" parent="menu_property_sales" name="Manajemen Estate"/>
+                <menuitem id="menu_property_rent" name="Sewa" action="action_view_property_rental_form" parent="menu_property_management_estate_sub"/>
+                <menuitem id="menu_property_ipl" name="IPL" action="action_view_management_estate_form" parent="menu_property_management_estate_sub" sequence="20"/>
+
+
+                <menuitem id="menu_property_unit_sub" parent="menu_property_sales" name="Unit"/>
+                <menuitem id="menu_property_unit" name="Unit" action="action_view_unit_form" parent="menu_property_unit_sub" sequence="10"/>
+                <menuitem id="menu_property_category" name="Cluster/Apartemen/Hotel" action="action_view_category_form" parent="menu_property_unit_sub" sequence="20"/>
+                <menuitem id="menu_property_tower" name="Menara" action="action_view_tower_form" parent="menu_property_unit_sub" sequence="30"/>
+                <menuitem id="menu_property_view" name="Pemandangan" action="action_view_pemandangan_form" parent="menu_property_unit_sub" sequence="40"/>
+                <menuitem id="menu_property_unit_type" name="Tipe" action="action_view_tipe_form" parent="menu_property_unit_sub" sequence="50"/>
+                <menuitem id="menu_property_unit_floor" name="Lantai" action="action_view_floor_form" parent="menu_property_unit_sub" sequence="60"/>
+                <menuitem id="menu_property_jenis" name="Jenis" action="action_property_jenis_form" parent="menu_property_unit_sub" sequence="61"/>
+				<menuitem id="menu_property_price" name="Harga Jual" action="action_property_price_form" parent="menu_property_unit_sub" sequence="62"/>
+				
+
+                <menuitem id="menu_view_installment_form_sub" parent="menu_property_sales" name="Installment"/>
+                <menuitem id="menu_property_installment" name="Installment" action="action_installment_form_tes" parent="menu_view_installment_form_sub"/>
+
+
+                <menuitem id="menu_property_purchase_form_sub" parent="menu_property_sales" name="Purchase"/>
+                <menuitem id="menu_property_material_request" name="Material Request" action="action_view_purchase_form" parent="menu_property_purchase_form_sub"/>
+                <menuitem id="menu_property_penawaran" name="Penawaran" action="action_view_purchase_form" parent="menu_property_purchase_form_sub"/>
+                <menuitem id="menu_property_purchase_order" name="Purchase Order" action="action_view_purchase_form" parent="menu_property_purchase_form_sub"/>
+
+                <menuitem id="menu_property_procurement_form_sub" parent="menu_property_sales" name="Procurement"/>
+                <menuitem id="menu_property_budget_plan" name="Budget Plan" action="action_view_procurement_form" parent="menu_property_procurement_form_sub"/>
+                <menuitem id="menu_property_work_order" name="Work Order" action="action_view_procurement_form" parent="menu_property_procurement_form_sub"/>
+                <menuitem id="menu_property_spk" name="SPK" action="action_view_procurement_form" parent="menu_property_procurement_form_sub"/>
+	     
+        </data>
+</odoo>

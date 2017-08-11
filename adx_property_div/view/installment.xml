@@ -1,0 +1,64 @@
+<odoo>
+	<data>
+
+		 <record id="view_installment_form" model="ir.ui.view">
+            <field name="name">Installment Form</field>
+            <field name="model">installment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                      <group><field name="name" required="1"/></group>
+                      <group>
+	                        <group>
+	                           <field name="type"/>
+		                       <field name="qty_installment"/>
+			        		   <field name="disc_pp_percent"/>
+			        		   <field name="is_flat_installment"/>
+			        		   <field name="interest"/>
+			        		   <field name="active"/>
+	                        </group>
+	                        <group>
+	                        	<field name="dp_method"/>
+					        	<field name="min_amount_dp"/>
+					        	<field name="dp_qty"/>
+					        	<field name="is_flat_dp"/>
+					        	<field name="special_dp_case"/>
+					        	<field name="dp_method_special" attrs="{'invisible':[('special_dp_case','=',False)]}"/>
+					        	<field name="amount_dp_special" attrs="{'invisible':[('special_dp_case','=',False)]}"/>
+					        	<field name="dp_qty_special" attrs="{'invisible':[('special_dp_case','=',False)]}"/>
+					        	
+	                        </group>
+                      </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+	  	<record model="ir.ui.view" id="installment_tree_view">
+		    <field name="name">Installment Tree View</field>
+		    <field name="model">installment</field>
+		    <field name="arch" type="xml">
+			    <tree>
+			    		<field name="name"/>
+			        	<field name="qty_installment"/>
+			        	<field name="disc_pp_percent"/>
+			        	<field name="is_flat_installment"/>
+			        	<field name="interest" invisible="1"/>
+			        	<field name="type" invisible="1"/>
+			        	<field name="dp_method"/>
+			        	<field name="min_amount_dp"/>
+			        	<field name="dp_qty"/>
+			        	<field name="special_dp_case"/>
+			        	<field name="dp_method_special"/>
+			        	<field name="amount_dp_special"/>
+			        	<field name="dp_qty_special" />
+			        	<field name="active" invisible="1"/>
+			        	<field name="is_flat_dp"/>
+			    </tree>    
+		    </field>
+	    </record>
+
+	 
+
+	</data>
+</odoo>

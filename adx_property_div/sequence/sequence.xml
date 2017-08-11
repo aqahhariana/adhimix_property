@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+    	
+        <record id="seq_reserved_busafa" model="ir.sequence">
+            <field name="name">Reservasi Busafa</field>
+            <field name="code">reserved_busafa</field>
+            <field name="prefix">BUSAFAR/RSV/</field>
+            <field name="padding">6</field>
+            <field name="company_id">3</field>
+        </record>
+        <record id="seq_booking_busafa" model="ir.sequence">
+            <field name="name">Booking Busafa</field>
+            <field name="code">booking_busafa</field>
+            <field name="prefix">BUSAFA/BOOK/</field>
+            <field name="padding">6</field>
+            <field name="company_id">3</field>
+        </record>
+        
+        <record id="seq_sales_busafa" model="ir.sequence">
+            <field name="name">Sales Busafa</field>
+            <field name="code">sales_busafa</field>
+            <field name="prefix">BUSAFA/SALES/</field>
+            <field name="padding">6</field>
+            <field name="company_id">3</field>
+        </record>
+ 	</data>
+</odoo>

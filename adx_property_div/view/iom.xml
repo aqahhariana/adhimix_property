@@ -1,0 +1,342 @@
+<odoo>
+    <data>
+
+
+        <record id="view_iom_new_installment_form" model="ir.ui.view">
+            <field name="name">Iom New Installment Form</field>
+            <field name="model">iom.new.installment</field>
+            <field name="arch" type="xml">
+                <form string="Iom New Installment" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="date_due"/>
+                            <field name="unit_id"/>
+                            <field name="description"/>
+                            <field name="amount_total"/>
+                            <field name="amount"/>
+                            <field name="amount_interest"/>
+                            <field name="iom_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_iom_new_installment_tree" model="ir.ui.view">
+            <field name="name">Iom New Installment Tree</field>
+            <field name="model">iom.new.installment</field>
+            <field name="arch" type="xml">
+                <tree string="Iom New Installment" >
+                    <field name="date_due"/>
+                    <field name="unit_id"/>
+                    <field name="description"/>
+                    <field name="amount_total"/>
+                    <field name="amount"/>
+                    <field name="amount_interest"/>
+                    <field name="iom_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_iom_old_installment_form" model="ir.ui.view">
+            <field name="name">Iom Old Installment Form</field>
+            <field name="model">iom.old.installment</field>
+            <field name="arch" type="xml">
+                <form string="Iom Old Installment" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="date_due"/>
+                            <field name="unit_id"/>
+                            <field name="description"/>
+                            <field name="amount_total"/>
+                            <field name="amount"/>
+                            <field name="amount_interest"/>
+                            <field name="iom_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_iom_old_installment_tree" model="ir.ui.view">
+            <field name="name">Iom Old Installment Tree</field>
+            <field name="model">iom.old.installment</field>
+            <field name="arch" type="xml">
+                <tree string="Iom Old Installment" >
+                    <field name="date_due"/>
+                    <field name="unit_id"/>
+                    <field name="description"/>
+                    <field name="amount_total"/>
+                    <field name="amount"/>
+                    <field name="amount_interest"/>
+                    <field name="iom_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_iom_cost_ganti_unit_form" model="ir.ui.view">
+            <field name="name">Iom Cost Ganti Unit Form</field>
+            <field name="model">iom.cost.ganti.unit</field>
+            <field name="arch" type="xml">
+                <form string="Iom Cost Ganti Unit" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="iom_id"/>
+                            <field name="description"/>
+                            <field name="cost"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_iom_cost_ganti_unit_tree" model="ir.ui.view">
+            <field name="name"> Tree</field>
+            <field name="model">iom.cost.ganti.unit</field>
+            <field name="arch" type="xml">
+                <tree string="Iom Cost Ganti Unit" >
+                    <field name="iom_id"/>
+                    <field name="description"/>
+                    <field name="cost"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_iom_cost_cancelation_form" model="ir.ui.view">
+            <field name="name">Iom Cost Cancelation Form</field>
+            <field name="model">iom.cost.cancelation</field>
+            <field name="arch" type="xml">
+                <form string="Iom Cost Cancelation" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="iom_id"/>
+                            <field name="description"/>
+                            <field name="cost"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_iom_cost_cancelation_tree" model="ir.ui.view">
+            <field name="name">Iom Cost Cancelation Tree</field>
+            <field name="model">iom.cost.cancelation</field>
+            <field name="arch" type="xml">
+                <tree string="Iom Cost Cancelation" >
+                    <field name="iom_id"/>
+                    <field name="description"/>
+                    <field name="cost"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_iom_invoice_penalty_phd_form" model="ir.ui.view">
+            <field name="name">Iom Invoice Penalty Phd Form</field>
+            <field name="model">iom.invoice.penalty.phd</field>
+            <field name="arch" type="xml">
+                <form string="Iom Invoice Penalty Phd" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="iom_id"/>
+                            <field name="invoice_id"/>
+                            <field name="amount_invoiced"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_iom_invoice_penalty_phd_tree" model="ir.ui.view">
+            <field name="name">Iom Invoice Penalty Phd Tree</field>
+            <field name="model">iom.invoice.penalty.phd</field>
+            <field name="arch" type="xml">
+                <tree string="Iom Invoice Penalty Phd" >
+                    <field name="iom_id"/>
+                    <field name="invoice_id"/>
+                    <field name="amount_invoiced"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_iom_invoice_penalty_pdd_form" model="ir.ui.view">
+            <field name="name">Iom Invoice Penalty Pdd Form</field>
+            <field name="model">iom.invoice.penalty.pdd</field>
+            <field name="arch" type="xml">
+                <form string="Iom Invoice Penalty Pdd" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="iom_id"/>
+                            <field name="invoice_id"/>
+                            <field name="amount_invoiced"/>
+                            <field name="amount_proposed"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_iom_invoice_penalty_pdd_tree" model="ir.ui.view">
+            <field name="name">Iom Invoice Penalty Pdd Tree</field>
+            <field name="model">iom.invoice.penalty.pdd</field>
+            <field name="arch" type="xml">
+                <tree string="Iom Invoice Penalty Pdd" >
+                    <field name="iom_id"/>
+                    <field name="invoice_id"/>
+                    <field name="amount_invoiced"/>
+                    <field name="amount_proposed"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_iom_form" model="ir.ui.view">
+            <field name="name">IOM Form</field>
+            <field name="model">iom</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_confirm" string="confirm" type="object" class="oe_highlight" states="draft"/>
+                        <button name="button_approved" string="Approved" type="object" states="confirm"/>
+                        <button name="button_compute_installment" string="Compute Installment" type="object" states="draft"/>
+                        <button name="button_cancel" string="Batal" type="object" class="oe_highlight" states="confirm,approved"/>
+                        <button name="button_draft" string="Set to Draft" type="object" states="cancel"/>
+                        <field name="state" widget="statusbar" readonly="True"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                            	<field name="name" required="1"/>
+                            	<field name="perihal"/>
+                                <field name="description"/>
+                                <field name="opt_pcb"/>
+                                <field name="opt_ptb"/>
+                                <field name="opt_pd"/>
+                                <field name="opt_pu"/>
+                                <field name="opt_cs"/>
+                                <field name="opt_ppu"/>
+                                <field name="opt_pls"/>
+                                <field name="opt_phd"/>
+                                <field name="opt_pdd"/>
+                                <field name="order_id" required="1"/>
+                                <field name="current_customer_id"/>
+                                <field name="current_payment_plan"/>
+                                <field name="current_property_unit_id"/>
+                                <field name="current_unit_price"/>
+                                <field name="total_paid"/>
+                                <field name="residual_installment"/>
+                                <field name="residual_interest"/>
+                                <field name="installment_paid"/>
+                                <field name="installment_id"/>
+                            </group>
+                            <group>
+                                <field name="qty_installment" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="disc_pp_percent" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="is_flat_installment" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="interest" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="dp_method"/>
+                                <field name="amount_dp" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="total_amount_dp" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="dp_qty" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="special_dp_case" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="dp_method_special" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="amount_dp_special" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="total_amount_dp_special" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="dp_qty_special" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="old_date" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="new_date" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="new_unit_id" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="new_customer_id" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                            </group>
+                        </group>
+                                <field name="invoice_penalty_phd" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="invoice_penalty_pdd" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="cost_cancelation" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="cost_pergantian_unit" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                                <field name="old_installment_line"/>
+                                <field name="new_installment_line" attrs="{'invisible': [('opt_pcb', '=', 'True')]}"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_iom_tree" model="ir.ui.view">
+            <field name="name">IOM Tree</field>
+            <field name="model">iom</field>
+            <field name="arch" type="xml">
+				<tree string="IOM" >
+                    <field name="name"/>
+                    <field name="perihal"/>
+                    <field name="description"/>
+                    <field name="opt_pcb"/>
+                    <field name="opt_ptb"/>
+                    <field name="opt_pd"/>
+                    <field name="opt_pu"/>
+                    <field name="opt_cs"/>
+                    <field name="opt_ppu"/>
+                    <field name="opt_pls"/>
+                    <field name="opt_phd"/>
+                    <field name="opt_pdd"/>
+                    <field name="order_id"/>
+                    <field name="current_customer_id"/>
+                    <field name="current_payment_plan"/>
+                    <field name="current_property_unit_id"/>
+                    <field name="current_unit_price"/>
+                    <field name="total_paid"/>
+                    <field name="residual_installment"/>
+                    <field name="residual_interest"/>
+                    <field name="installment_paid"/>
+                    <field name="installment_id"/>
+                    <field name="qty_installment"/>
+                    <field name="disc_pp_percent"/>
+                    <field name="is_flat_installment"/>
+                    <field name="interest"/>
+                    <field name="dp_method"/>
+                    <field name="amount_dp"/>
+                    <field name="total_amount_dp"/>
+                    <field name="dp_qty"/>
+                    <field name="special_dp_case"/>
+                    <field name="dp_method_special"/>
+                    <field name="amount_dp_special"/>
+                    <field name="total_amount_dp_special"/>
+                    <field name="dp_qty_special"/>
+                    <field name="old_date"/>
+                    <field name="new_date"/>
+                    <field name="new_unit_id"/>
+                    <field name="new_customer_id"/>
+                    <field name="invoice_penalty_phd"/>
+                    <field name="invoice_penalty_pdd"/>
+                    <field name="cost_cancelation"/>
+                    <field name="cost_pergantian_unit"/>
+                    <field name="old_installment_line"/>
+                    <field name="new_installment_line"/>
+				</tree>
+			</field>
+		</record>
+
+
+
+    </data>
+</odoo>

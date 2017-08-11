@@ -1,0 +1,244 @@
+<odoo>
+    <data>
+
+
+
+      <record id="view_property_payment_line_form" model="ir.ui.view">
+            <field name="name">Property Payment Line Form</field>
+            <field name="model">property.payment.line</field>
+            <field name="arch" type="xml">
+                <form>
+                  <header>
+                        <button name="button_confirm" string="Konfirmasi" type="object" class="oe_highlight" states="Draft"/>
+                        <button name="button_paid" string="Batal" type="object" class="oe_highlight" states="confirmed"/>
+                        <field name="state" widget="statusbar" readonly="True"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="date_due"/>
+                            <field name="property_unit_id"/>
+                            <field name="description"/>
+                            <field name="use_nota_kredit"/>
+                            <field name="amount_nota_kredit"/>
+                            <field name="amount_total"/>
+                            <field name="amount"/>
+                            <field name="amount_interest"/>
+                            <field name="amount_invoiced"/>
+                            <field name="amount_outstanding"/>
+                            <field name="amount_paid"/>
+                            <field name="invoice_id"/>
+                            <field name="nota_kredit_id"/>
+                            <field name="state"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_property_payment_line_tree" model="ir.ui.view">
+            <field name="name">Property Payment Line Tree</field>
+            <field name="model">property.payment.line</field>
+            <field name="arch" type="xml">
+                <tree string="Property Payment Line" >
+                  <field name="date_due"/>
+                  <field name="property_unit_id"/>
+                  <field name="description"/>
+                  <field name="use_nota_kredit"/>
+                  <field name="amount_nota_kredit"/>
+                  <field name="amount_total"/>
+                  <field name="amount"/>
+                  <field name="amount_interest"/>
+                  <field name="amount_invoiced"/>
+                  <field name="amount_outstanding"/>
+                  <field name="amount_paid"/>
+                  <field name="invoice_id"/>
+                  <field name="nota_kredit_id"/>
+                  <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+      <record id="view_property_order_line_form" model="ir.ui.view">
+            <field name="name">Property Order Line Form</field>
+            <field name="model">property.order.line</field>
+            <field name="arch" type="xml">
+                <form string="Property Order Line" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="property_unit_id"/>
+                            <field name="description"/>
+                            <field name="back_date"/>
+                            <field name="old_price_date"/>
+                            <field name="unit_price"/>
+                            <field name="tax_id"/>
+                            <field name="subtotal"/>
+                            <field name="order_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_property_order_line_tree" model="ir.ui.view">
+            <field name="name">Property Order Line Tree</field>
+            <field name="model">property.order.line</field>
+            <field name="arch" type="xml">
+                <tree string="Property Order Line" >
+                  <field name="property_unit_id"/>
+                            <field name="description"/>
+                            <field name="back_date"/>
+                            <field name="old_price_date"/>
+                            <field name="unit_price"/>
+                            <field name="tax_id"/>
+                            <field name="subtotal"/>
+                            <field name="order_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <record id="view_property_sale_form" model="ir.ui.view">
+            <field name="name">Property Sale Form</field>
+            <field name="model">property.sale</field>
+            <field name="arch" type="xml">
+                <form>
+                   <header>
+                        <button name="button_confirmed" string="Konfirmasi" type="object" class="oe_highlight" states="draft"/>
+                        <button name="action_confirm_booking_fee" string="Konfirmasi Booking Fee" type="object" class="oe_highlight" states="booking"/>
+                        <button name="action_confirm_manager" string="Manager Approved" type="object" class="oe_highlight" states="waiting_manager"/>
+                        <button name="button_cancel" string="Batal" type="object" class="oe_highlight" states="done,booking,waiting_manager,confirm"/>
+                        <button name="set_draft" string="Set Draft" type="object" class="oe_highlight" states="cancel"/>
+                        <field name="state" widget="statusbar" readonly="True"/>
+                    </header>
+                    <sheet>
+                      <h1><field name="name" nolabel="1" readonly="1"/></h1>
+                      <group>
+	                        <group>
+		                      <field name="booking_id" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+	                          <field name="partner_id" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+	                          <field name="date_spr" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+	                          <field name="company_id" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>  
+	                        </group>
+	                        <group>
+	                          <field name="is_ppjb" readonly="1"/>
+		                      <field name="is_bast" readonly="1"/>
+	                        </group>
+                      </group>
+                     
+                      <group string="Catatan">
+                      	  <field name="notes" nolabel="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                      </group>
+                       <group>
+	                       	<notebook>
+	                      		<page string="Properti Order">
+	                      			<group>
+	                      				<field name="property_order_ids" nolabel="1" attrs="{'readonly':[('state','!=','draft')]}">
+		                      				<tree string="Properti Order" editable="Top">
+		                      					<field name="property_unit_id"/>
+		                      					<field name="back_date"/>
+						                        <field name="old_price_date"/>
+						                        <field name="unit_price"/>
+						                        <field name="tax_id"/>
+		                      				</tree>
+	                      				</field>
+	                      			</group>
+	                      		</page>
+	                      	</notebook>
+	                   </group>
+	                   <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                            <field name="amount_before_discount" />
+                            <field name="amount_discount_pp" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="amount_after_discount" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="amount_untaxed" />
+                            <field name="amount_taxed" />
+                            <field name="amount_interest" />
+                            <field name="amount_final" />
+                       </group>
+	                   <group>
+                      		<group string="Cara Bayar">
+                      			<field name="installment_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                        <field name="qty_installment" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                        <field name="disc_pp_percent" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                        <field name="is_flat_installment" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                        <field name="interest" attrs="{'readonly':[('state','!=','draft')]}"/>
+                      		</group>
+                      		<group string="Uang Muka">
+                      			 <field name="dp_method" attrs="{'readonly':[('state','!=','draft')]}"/>
+                          		 <field name="amount_dp" attrs="{'readonly':[('state','!=','draft')]}"/>
+                          		 <field name="total_amount_dp" attrs="{'readonly':[('state','!=','draft')]}"/>
+                         		 <field name="dp_qty" attrs="{'readonly':[('state','!=','draft')]}"/>
+                         		 <field name="is_flat_dp" attrs="{'readonly':[('state','!=','draft')]}"/>
+                          		 <field name="special_dp_case" attrs="{'readonly':[('state','!=','draft')]}"/>
+                          		 <field name="dp_method_special" attrs="{'invisible':[('special_dp_case','=',False)]}"/>
+                          		 <field name="amount_dp_special" attrs="{'invisible':[('special_dp_case','=',False)]}"/>
+                          		 <field name="total_amount_dp_special" attrs="{'invisible':[('special_dp_case','=',False)]}"/>
+                          		 <field name="dp_qty_special" attrs="{'invisible':[('special_dp_case','=',False)]}"/>
+                      		</group>
+                      </group>
+                      <group string="Booking Fee">
+                      	   <field name="booking_fee_amount" attrs="{'readonly':[('state','!=','draft')]}"/>
+                      </group>
+                      <group name="Pembayaran" string="Pembayaran">
+                      		<button name="compute_installment" string="Hitung Cara Pembayaran" type="object" class="oe_highlight" states="draft"/>
+                      </group>
+                      <group>
+                      		<field name="pembayaran" nolabel="1">
+                      			<tree string="Pembayaran" editable="Top">
+                      				<field name="date_due"/>
+                      				<field name="description"/>
+                      				<field name="amount_nota_kredit"/>
+                      				<field name="amount" sum="Total Amount"/>
+                      				<field name="amount_interest"/>
+                      				<field name="amount_total"/>
+                      				<field name="state"/>
+                      			</tree>
+                      		</field>
+                      </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_property_sale_tree" model="ir.ui.view">
+            <field name="name">Property Sale Tree</field>
+            <field name="model">property.sale</field>
+            <field name="arch" type="xml">
+                <tree string="Property Sale" >
+                  <field name="name"/>
+                  <field name="booking_id"/>
+                  <field name="partner_id"/>
+                  <field name="date_spr"/>
+                  <field name="is_ppjb"/>
+                  <field name="is_bast"/>
+                  <field name="notes"/>
+                  <field name="property_order_ids"/>
+                  <field name="installment_id"/>
+                  <field name="qty_installment"/>
+                  <field name="disc_pp_percent"/>
+                  <field name="is_flat_installment"/>
+                  <field name="interest"/>
+                  <field name="dp_method"/>
+                  <field name="amount_dp"/>
+                  <field name="total_amount_dp"/>
+                  <field name="dp_qty"/>
+                  <field name="special_dp_case"/>
+                  <field name="dp_method_special"/>
+                  <field name="amount_dp_special"/>
+                  <field name="total_amount_dp_special"/>
+                  <field name="dp_qty_special"/>
+                  <field name="booking_fee_amount"/>
+                  <field name="pembayaran"/>
+                  <field name="state"/>
+                </tree>
+           </field>
+      </record>
+
+    </data>
+</odoo>

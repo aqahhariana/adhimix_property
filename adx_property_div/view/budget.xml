@@ -1,0 +1,86 @@
+<odoo>
+    <data>
+
+        <record id="view_work_order_form" model="ir.ui.view">
+            <field name="name">Work Order Form</field>
+            <field name="model">work.order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="budget_id"/>
+                            <field name="description"/>
+                            <field name="amount"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_work_order_tree" model="ir.ui.view">
+            <field name="name">Work Order Tree</field>
+            <field name="model">work.order</field>
+            <field name="arch" type="xml">
+                <tree string="Work Order" >
+                    <field name="budget_id"/>
+                    <field name="description"/>
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_property_budget_form" model="ir.ui.view">
+            <field name="name">Property Budget Form</field>
+            <field name="model">property.budget</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_confirm" string="Konfirmasi" type="object" class="oe_highlight" states="draft"/>
+                        <button name="button_approved" string="Di Setujui" type="object" class="oe_highlight" states="confirm"/>
+                        <button name="button_cancel" string="Batal" type="object" class="oe_highlight" states="confirm,approved"/>
+                        <button name="button_draft" string="Set to Draft" type="object" class="oe_highlight" states="cancel"/>
+                        <field name="state" widget="statusbar" readonly="True"/>
+                    </header>
+                    <sheet>
+                        <group>
+                        	<field name="name"/>
+                        	<field name="date"/>
+                            <field name="jenis"/>
+                            <field name="type"/>
+                            <field name="area_code"/>
+                            <field name="land_area"/>
+                            <field name="effective_land_area"/>
+                            <field name="work_order"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_property_budget_tree" model="ir.ui.view">
+            <field name="name">Property Budget Tree</field>
+            <field name="model">property.budget</field>
+            <field name="arch" type="xml">
+				<tree string="Property Budget" >
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="jenis"/>
+                    <field name="type"/>
+                    <field name="area_code"/>
+                    <field name="land_area"/>
+                    <field name="effective_land_area"/>
+                    <field name="work_order"/>
+                </tree>
+			</field>
+		</record>
+
+
+
+    </data>
+</odoo>

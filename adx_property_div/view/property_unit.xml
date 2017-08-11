@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+       <record id="property_unit_rental_price_form" model="ir.ui.view">
+            <field name="name">Property Unit Rental Price Form</field>
+            <field name="model">property.unit.rental.price</field>
+            <field name="arch" type="xml">
+                <form string="Property Unit Rental Price" version="7.0">
+                    <sheet>
+                        <group>
+                          <field name="date"/>
+                          <field name="price"/>
+                          <field name="pricing_type"/>
+                          <field name="deskripsi"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+      </record>
+        
+               
+        <record id="property_unit_rental_price_tree" model="ir.ui.view">
+            <field name="name">Property Unit Rental Price Tree</field>
+            <field name="model">property.unit.rental.price</field>
+            <field name="arch" type="xml">
+                <tree string="Property Unit Rental Price">
+                  <field name="date"/>
+                  <field name="price"/>
+                  <field name="pricing_type"/>
+                  <field name="deskripsi"/>
+                </tree>
+            </field>
+        </record>
+		
+		
+		
+		<record id="view_property_category_form" model="ir.ui.view">
+            <field name="name">Property Category Form</field>
+            <field name="model">property.category</field>
+            <field name="arch" type="xml">
+                <form string="Property Category" version="7.0">
+                    <sheet>
+                        <group>
+                        	<group>
+	                        	<field name="code" required="1"/>
+	                        	<field name="name" required="1"/>
+	                        	<field name="type" required="1"/>
+	                        	<field name="company_id"/>
+                        	</group>
+                        	
+                        </group>
+                        <group string="Konfigurasi Akunting">
+                        	<group>
+	                        	<field name="property_receivable_account_id"/>
+	                        	<field name="property_cogs_account_id"/>
+	                        	<field name="property_account_inventory_id"/>
+	                        	<field name="property_account_booking_fee_id"/>
+	                        	<field name="property_account_income_id"/>
+                        	</group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_property_category_tree" model="ir.ui.view">
+            <field name="name">Property Category Tree</field>
+            <field name="model">property.category</field>
+            <field name="arch" type="xml">
+				<tree string="Property Category" >
+					<field name="code"/>
+                	<field name="name"/>
+                	<field name="type"/>
+                	<field name="company_id"/>
+				</tree>
+			</field>
+		</record>
+
+
+
+		<record id="view_property_view_form" model="ir.ui.view">
+            <field name="name">Property View Form</field>
+            <field name="model">property.view</field>
+            <field name="arch" type="xml">
+                <form string="Property View" version="7.0">
+                    <sheet>
+                        <group>
+                        	<group>
+	                        	<field name="name" required="1"/>
+	                        	<field name="property_category_id" required="1"/>
+	                        	<field name="company_id"/>
+                        	</group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_property_view_tree" model="ir.ui.view">
+            <field name="name">Property View Tree</field>
+            <field name="model">property.view</field>
+            <field name="arch" type="xml">
+				<tree string="Property View" >
+					<field name="name"/>
+                    <field name="property_category_id"/>
+                    <field name="company_id"/>
+                </tree>
+			</field>
+		</record>
+
+
+		<record id="view_property_floor_form" model="ir.ui.view">
+            <field name="name">Property floor Form</field>
+            <field name="model">property.floor</field>
+            <field name="arch" type="xml">
+                <form string="Property floor" version="7.0">
+                    <sheet>
+                        <group>
+                        	<group>
+	                        	<field name="name" required="1"/>
+	                        	<field name="property_category_id" required="1"/>
+	                        	<field name="company_id"/>
+                        	</group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_property_floor_tree" model="ir.ui.view">
+            <field name="name">Property floor Tree</field>
+            <field name="model">property.floor</field>
+            <field name="arch" type="xml">
+				<tree string="Property floor" >
+					<field name="name"/>
+                    <field name="property_category_id"/>
+                    <field name="company_id"/>
+                </tree>
+			</field>
+		</record>
+
+
+		<record id="view_property_tower_form" model="ir.ui.view">
+            <field name="name">Property tower Form</field>
+            <field name="model">property.tower</field>
+            <field name="arch" type="xml">
+                <form string="Property Tower" version="7.0">
+                    <sheet>
+                        <group>
+                        	<group>
+	                        	<field name="name" required="1"/>
+	                        	<field name="property_category_id" required="1"/>
+	                        	<field name="company_id"/>
+                        	</group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_property_tower_tree" model="ir.ui.view">
+            <field name="name">Property Tower Tree</field>
+            <field name="model">property.tower</field>
+            <field name="arch" type="xml">
+				<tree string="Property tower" >
+					<field name="name"/>
+                    <field name="property_category_id"/>
+                    <field name="company_id"/>
+                    
+                </tree>
+			</field>
+		</record>
+
+
+		<record id="view_property_type_form" model="ir.ui.view">
+            <field name="name">Property Type Form</field>
+            <field name="model">property.type</field>
+            <field name="arch" type="xml">
+                <form string="Property Type" version="7.0">
+                    <sheet>
+                        <group>
+                        	<group>
+	                        	<field name="name" required="1"/>
+	                        	<field name="property_category_id" required="1"/>
+	                        	<field name="company_id"/>
+                        	</group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_property_type_tree" model="ir.ui.view">
+            <field name="name">Property Type Tree</field>
+            <field name="model">property.type</field>
+            <field name="arch" type="xml">
+				<tree string="Property type" >
+					<field name="name"/>
+                    <field name="property_category_id"/>
+                    <field name="company_id"/>
+                </tree>
+			</field>
+		</record>
+		
+		
+		<record id="view_property_jenis" model="ir.ui.view">
+            <field name="name">Property Jenis</field>
+            <field name="model">property.jenis</field>
+            <field name="arch" type="xml">
+				<tree string="Property type" >
+					<field name="name"/>
+                    <field name="property_category_id"/>
+                    <field name="company_id"/>
+                </tree>
+			</field>
+		</record>
+		
+		
+
+
+		<record id="view_property_unit_form" model="ir.ui.view">
+            <field name="name">Property Unit Form</field>
+            <field name="model">property.unit</field>
+            <field name="arch" type="xml">
+                <form string="Property Unit" version="7.0">
+                    <sheet>
+	                    <group>
+    	                     	<field name="name" required="1"/>
+    		                    <field name="address" required="1"/>
+    		                    <field name="type" required="1"/>
+    		                    <field name="property_category_id" required="1"/>		                   
+		                        <field name="company_id"/>
+                        </group>
+                        <group>
+                        	<group string="Status Jual">
+                        		<field name="available"/>
+		                        <field name="status"/>
+		                        <field name="owner_id"/>
+                        	</group>
+                        	<group string="Status Sewa">
+                        		<field name="is_rent"/>
+                                <field name="rent_available"/>
+                        	</group>
+                        </group>
+                        <group>
+	                        <notebook>
+		                        <page string="Informasi Lokasi dan Luas Area">
+		                        	<group>
+		                        		<group>
+				                        	<field name="property_view_id"/>
+						                    <field name="property_tower_id"/>
+						                    <field name="property_type_id"/>
+						                    <field name="property_jenis_id"/>
+						                    <field name="property_floor_id"/>
+					                    </group>
+					                    <group>
+					                    	<field name="direction"/>
+						                    <field name="bulding_area"/>
+						                    <field name="land_area"/>
+						                    <field name="nett_area"/>
+						                    <field name="semi_gross_area"/>
+					                    </group>
+				                    </group>
+		                        </page>
+		                        <page string="Daftar Harga Jual">
+		                        	<group>
+		                        		<field name="current_pricelist"/>
+		                        	</group>
+		                        	<field name="price_ids">
+		                        		<tree string="Daftar Harga Jual" editable="Top">
+		                        			<field name="date"/>
+						                    <field name="name"/>
+						                    <field name="net_price"/>
+		                        		</tree>
+		                        	</field>
+		                        </page>
+		                        <page string="Daftar Harga Sewa">
+		                        	
+		                        	<field name="rental_price_ids">
+		                        		<tree string="Daftar Harga Sewa" editable="Top">
+		                        			<field name="date"/>
+						                    <field name="deskripsi"/>
+						                    <field name="pricing_type"/>
+						                    <field name="price"/>
+		                        		</tree>
+		                        	</field>
+		                        </page>
+	                        </notebook>
+                        </group>
+                        	
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_property_unit_tree" model="ir.ui.view">
+            <field name="name">Property Unit Tree</field>
+            <field name="model">property.unit</field>
+            <field name="arch" type="xml">
+				<tree string="Property unit" >
+					<field name="name"/>
+                	<field name="type"/>
+                	<field name="address"/>
+                	<field name="property_category_id"/>
+                	<field name="property_view_id"/>
+                	<field name="property_tower_id"/>
+                	<field name="property_type_id"/>
+                	<field name="property_floor_id"/>
+                	<field name="direction"/>
+                	<field name="bulding_area"/>
+                	<field name="land_area"/>
+                	<!-- <field name="price_ids"/> -->
+                <!-- 	<field name="available"/> -->
+                	<field name="status"/>
+                	<field name="owner_id"/>
+                	<field name="company_id"/>
+                    <field name="rental_price_ids"/>
+                    <field name="is_rent"/>
+                    <field name="rent_available"/>
+                    <field name="current_pricelist"/>
+                </tree>
+			</field>
+		</record>
+		
+		<record id="view_property_price_tree" model="ir.ui.view">
+            <field name="name">Property Price</field>
+            <field name="model">property.unit.price</field>
+            <field name="arch" type="xml">
+				<tree string="Harga Jual" >
+					<field name="property_unit_id"/>
+                	<field name="date"/>
+                	<field name="name"/>
+                	<field name="net_price"/>
+				</tree>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

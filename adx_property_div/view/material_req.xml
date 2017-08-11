@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+
+
+        <record id="view_property_material_line_form" model="ir.ui.view">
+            <field name="name">Property Material Line Form</field>
+            <field name="model">property.material.line</field>
+            <field name="arch" type="xml">
+                <form string="Property Material Line" version="7.0">
+                    <sheet>
+                        <group>
+                          <field name="product_id"/>
+                          <field name="qty"/>
+                          <field name="unit_price"/>
+                          <field name="subtotal"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+      </record>
+        
+               
+        <record id="view_property_material_line_tree" model="ir.ui.view">
+            <field name="name">Property Material Line Tree</field>
+            <field name="model">property.material.line</field>
+            <field name="arch" type="xml">
+                <tree string="Property Material Line" >
+                  <field name="product_id"/>
+                  <field name="qty"/>
+                  <field name="unit_price"/>
+                  <field name="subtotal"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_property_material_req_form" model="ir.ui.view">
+            <field name="name">Property Material Req Form</field>
+            <field name="model">property.material.req</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_confirm" string="Konfirmasi" type="object" class="oe_highlight" states="draft"/>
+                        <button name="button_approved" string="Di Setujui" type="object" class="oe_highlight" states="confirm"/>
+                        <button name="button_cancel" string="Batal" type="object" class="oe_highlight" states="confirm,approved"/>
+                        <button name="button_draft" string="Set to Draft" type="object" class="oe_highlight" states="cancel"/>
+                        <field name="state" widget="statusbar" readonly="True"/>
+                    </header>
+                    <sheet>
+                        <group>
+                        	<field name="name"/>
+                        	<field name="date"/>
+                        	<field name="employee_id"/>
+                            <field name="description"/>
+                            <field name="material_line"/>
+                            <field name="material_req_lines"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_property_material_req_tree" model="ir.ui.view">
+            <field name="name">Property Material Req Tree</field>
+            <field name="model">property.material.req</field>
+            <field name="arch" type="xml">
+				<tree string="Property Material Req" >
+					<field name="name"/>
+                	<field name="date"/>
+                	<field name="employee_id"/>
+                    <field name="description"/>
+                    <field name="material_line"/>
+                    <field name="material_req_lines"/>
+				</tree>
+			</field>
+		</record>
+
+
+
+    </data>
+</odoo>

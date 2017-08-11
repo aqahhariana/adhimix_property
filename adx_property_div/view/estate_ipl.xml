@@ -1,0 +1,141 @@
+<odoo>
+    <data>
+
+
+      <record id="view_property_rent_form" model="ir.ui.view">
+            <field name="name">Property Rent Form</field>
+            <field name="model">property.rental</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_confirm" string="Confirm" type="object" class="oe_highlight" states="draft"/>
+                        <button name="button_paid" string="Done" type="object" class="oe_highlight" states="confirm"/>
+                        <button name="button_cancel" string="Batal" type="object" class="oe_highlight" states="confirm"/>
+                        <field name="state" widget="statusbar" readonly="True"/>
+                    </header>
+                    <sheet>
+                        <group>
+                          <field name="name" required="1"/>
+                          <field name="date"/>
+                          <field name="date_start"/>
+                          <field name="date_stop"/>
+                          <field name="partner_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+      </record>
+        
+               
+        <record id="view_property_rent_tree" model="ir.ui.view">
+            <field name="name">Property Rent Tree</field>
+            <field name="model">property.rental</field>
+            <field name="arch" type="xml">
+                <tree string="Property Rent">
+                  <field name="name"/>
+                  <field name="date"/>
+                  <field name="date_start"/>
+                  <field name="date_stop"/>
+                  <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+      <record id="view_ipl_cost_line_form" model="ir.ui.view">
+            <field name="name">Ipl Cost Line Form</field>
+            <field name="model">ipl.cost.line</field>
+            <field name="arch" type="xml">
+                <form string="Ipl Cost Line" version="7.0">
+                    <sheet>
+                        <group>
+                          <field name="ipl_id"/>
+                          <field name="description"/>
+                          <field name="amount"/>
+                          <field name="account_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+      </record>
+        
+               
+        <record id="view_ipl_cost_line_tree" model="ir.ui.view">
+            <field name="name">Ipl Cost Line Tree</field>
+            <field name="model">ipl.cost.line</field>
+            <field name="arch" type="xml">
+                <tree string="Ipl Cost Line" >
+                  <field name="ipl_id"/>
+                  <field name="description"/>
+                  <field name="amount"/>
+                  <field name="account_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_estate_ipl_form" model="ir.ui.view">
+            <field name="name">IPL</field>
+            <field name="model">estate.ipl</field>
+            <field name="arch" type="xml">
+                <form>
+                  <header>
+                        <button name="button_confirm" string="Konfirmasi" type="object" class="oe_highlight" states="draft"/>
+                        <button name="button_paid" string="Paid" type="object" class="oe_highlight" states="confirm"/>
+                        <button name="button_cancel" string="Batal" type="object" class="oe_highlight" states="confirm"/>
+                        <field name="state" widget="statusbar" readonly="True"/>
+                    </header>
+                    <sheet>
+                      <group>
+                      	
+                        	<field name="name"/>
+                        
+	                        <group>
+		                        <field name="unit_id" required="1"/>
+		                        <field name="customer_id" />
+		                        <field name="category_id" />
+		                        
+	                        </group>
+	                        <group>
+	                        	<field name="due_date" required="1"/>
+		                        <field name="journal_id" required="1"/>
+		                        <field name="period_id" invisible="1"/>
+	                        </group>
+                      
+                      </group>
+                      <group>
+                      		<field name="cost_lines" nolabel="1">
+		                      	<!-- <tree string="Daftar Biaya" editable="Top">
+		                      		<field name="description"/>
+		                      		<field name="amount"/>
+						                  <field name="account_id"/>
+		                      	</tree> -->
+	                      	</field>
+                      </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="view_estate_ipl_tree" model="ir.ui.view">
+            <field name="name">IPL</field>
+            <field name="model">estate.ipl</field>
+            <field name="arch" type="xml">
+                <tree string="Estate Ipl" >
+                  <field name="name"/>
+                  <field name="unit_id"/>
+		              <field name="customer_id" />
+                  <field name="category_id" />
+                  <field name="due_date"/>
+    		          <field name="journal_id"/>
+    		          <field name="period_id"/>
+                  <field name="cost_lines"/>
+                </tree>
+            </field>
+         </record>
+
+    </data>
+</odoo>

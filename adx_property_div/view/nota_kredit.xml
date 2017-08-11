@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+
+        <record id="view_nota_kredit_form" model="ir.ui.view">
+            <field name="name">Nota Kredit Form</field>
+            <field name="model">nota.kredit</field>
+            <field name="arch" type="xml">
+                <form string="Nota Kredit" version="7.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="order_id"/>
+                                <field name="amount"/>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_nota_kredit_tree" model="ir.ui.view">
+            <field name="name">Nota Kredit Tree</field>
+            <field name="model">nota.kredit</field>
+            <field name="arch" type="xml">
+                <tree string="Nota Kredit" >
+                    <field name="order_id"/>
+                    <field name="amount"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>
